@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header {
+    text-align: center;
+    padding: 5vh 0;
+}
+
+header > img {
+    width: 180px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+header > h2 {
+    margin-bottom: 10px;
+}
+
+header > p {
+    margin-bottom: 20px;
+    color: #A9A9A9;
+}
+
+.account-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #E5E5E5;
+    width: 100px;
+    height: 67px;
+    margin: 0 0.8vw;
+    border-radius: 12px;
+}
+
+.data-number {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.data-info {
+    color: #BDBDBD;
+}
+
+main {
+    display: grid;
+    max-width: 100%;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:    "a b b"
+                            "c c d"
+                            "e f d";
+    gap: 20px;
+    align-items: stretch; /*alignment*/
+}
+
+main img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px rgb(172, 172, 172);
+}
+
+main img:nth-child(1) {
+    grid-area: a;
+}
+main img:nth-child(2) {
+    grid-area: b;
+}
+main img:nth-child(3) {
+    grid-area: c;
+}
+main img:nth-child(4) {
+    grid-area: d;
+}
+main img:nth-child(5) {
+    grid-area: e;
+}
+main img:nth-child(6) {
+    grid-area: f;
+}
+
+footer {
+    padding: 50px 0;
+    text-align: center;
+    font-weight: 600;
+    color: #A9A9A9;
+}
+
+@media (max-width: 576px) {
+    header > img {
+        width: 100px;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
+}
